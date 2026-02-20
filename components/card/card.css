@@ -5,6 +5,7 @@
     background-color: var(--primary-color);
     border-radius: 0.8rem;
     width: 100%;
+    position: relative;
 }
 
 .kanban-card__drag-handle {
@@ -34,6 +35,7 @@
     flex-direction: column;
     gap: 0.3rem;
     width: 100%;
+    flex: 1;
 }
 
 /* .kanban-card__status {
@@ -54,6 +56,52 @@
     font-size: 0.8rem;
     color: var(--secondary-text-color);
     width: 100%;
+}
+
+.kanban-card__actions {
+    display: flex;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.kanban-card:hover .kanban-card__actions {
+    opacity: 1;
+}
+
+.kanban-card__action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    color: var(--secondary-text-color);
+    transition: color 0.2s ease;
+}
+
+.kanban-card__action-btn:hover {
+    color: var(--primary-text-color);
+}
+
+.kanban-card__action-btn svg {
+    width: 100%;
+    height: 100%;
+}
+
+.kanban-card.is-dragging {
+    opacity: 0.5;
+    cursor: grabbing;
+}
+
+.kanban-card.is-drag-over {
+    border-color: var(--tertiary-color);
+    background-color: var(--secondary-color);
 }
 
 @media (min-width: 768px) {
