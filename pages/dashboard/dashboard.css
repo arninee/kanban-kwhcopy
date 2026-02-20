@@ -54,7 +54,17 @@
     }
 
     .dashboard__grid .app {
-        flex-direction: row;
+        flex-direction: column;
         gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .dashboard {
+        padding: 2rem;
+    }
+
+    .dashboard__grid .app {
+        flex-direction: row;
     }
 }
