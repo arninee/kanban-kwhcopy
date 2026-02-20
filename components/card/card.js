@@ -77,13 +77,10 @@ export class KanbanCard {
         const dragHandle = this.element.querySelector('.kanban-card__drag-handle');
         if (!dragHandle) return;
 
-        // Make the entire card draggable
         this.element.draggable = true;
-
         this.element.addEventListener('dragstart', (e) => {
             e.dataTransfer.effectAllowed = 'move';
             e.dataTransfer.setData('text/plain', this.id);
-            // Add visual feedback
             setTimeout(() => {
                 this.element.classList.add('is-dragging');
             }, 0);
