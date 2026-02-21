@@ -1,0 +1,27 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+.app {
+    display: flex;
+    gap: 1rem;
+    padding: 1rem;
+}
+
+:root {
+    --primary-color: #ffffff;
+    --secondary-color: #F3F3F5;
+    --tertiary-color: #030213;
+    --primary-button-color: #030213;
+    --secondary-button-color: #ffffff;
+    --primary-text-color: #0A0A0A;
+    --secondary-text-color: #717182;
+    --primary-border-color: #717182;
+}
